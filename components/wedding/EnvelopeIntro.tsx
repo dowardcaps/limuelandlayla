@@ -57,7 +57,7 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
         onClick={handleOpen}
         onKeyDown={handleKeyDown}
         aria-label="Open the wedding invitation"
-        className={`envelope-scene stage-${stage} group relative h-[170px] w-[250px] cursor-pointer outline-none sm:h-[190px] sm:w-[280px] md:h-[210px] md:w-[310px] touch-manipulation`}
+        className={`envelope-scene stage-${stage} group relative h-42.5 w-62.5 cursor-pointer outline-none sm:h-47.5 sm:w-70 md:h-52.5 md:w-77.5 touch-manipulation`}
         data-aos="zoom-in"
         data-aos-delay="200"
       >

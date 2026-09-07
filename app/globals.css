@@ -1,5 +1,95 @@
 @import "tailwindcss";
 
+.bg-paper {
+  background-color: #fbfaf6;
+}
+.bg-paper-dim {
+  background-color: #f3f1ea;
+}
+.bg-navy {
+  background-color: #1f2a44;
+}
+.bg-navy-deep {
+  background-color: #141b2d;
+}
+.text-ink {
+  color: #1c2333;
+}
+.text-navy {
+  color: #1f2a44;
+}
+.text-navy\/70 {
+  color: rgba(31, 42, 68, 0.7);
+}
+.text-navy\/80 {
+  color: rgba(31, 42, 68, 0.8);
+}
+.text-navy\/60 {
+  color: rgba(31, 42, 68, 0.6);
+}
+.text-navy\/50 {
+  color: rgba(31, 42, 68, 0.5);
+}
+.text-navy\/45 {
+  color: rgba(31, 42, 68, 0.45);
+}
+.text-navy\/40 {
+  color: rgba(31, 42, 68, 0.4);
+}
+.text-navy\/55 {
+  color: rgba(31, 42, 68, 0.55);
+}
+.border-hairline {
+  border-color: #d9d4c6;
+}
+.border-navy\/15 {
+  border-color: rgba(31, 42, 68, 0.15);
+}
+.border-navy\/20 {
+  border-color: rgba(31, 42, 68, 0.2);
+}
+.border-navy\/25 {
+  border-color: rgba(31, 42, 68, 0.25);
+}
+.border-navy\/30 {
+  border-color: rgba(31, 42, 68, 0.3);
+}
+.border-navy\/40 {
+  border-color: rgba(31, 42, 68, 0.4);
+}
+.border-brass\/70 {
+  border-color: rgba(169, 134, 90, 0.7);
+}
+.text-brass {
+  color: #a9865a;
+}
+.font-body {
+  font-family: var(--font-body);
+}
+.font-display {
+  font-family: var(--font-display);
+}
+.font-script {
+  font-family: var(--font-script);
+}
+
+
+@theme {
+  --color-navy: #1f2a44;
+  --color-navy-deep: #141b2d;
+  --color-ink: #1c2333;
+  --color-paper: #fbfaf6;
+  --color-paper-dim: #f3f1ea;
+  --color-white: #ffffff;
+  --color-hairline: #d9d4c6;
+  --color-brass: #a9865a;
+  
+  /* Font variables */
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-script: var(--font-script);
+}
+
 :root {
   --color-navy: #1f2a44;
   --color-navy-deep: #141b2d;
@@ -222,4 +312,28 @@ img, svg, video, canvas {
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+}
+
+.h-42\.5 {
+  height: 10.625rem;
+}
+.w-62\.5 {
+  width: 15.625rem;
+}
+.h-47\.5 {
+  height: 11.875rem;
+}
+.w-70 {
+  width: 17.5rem;
+}
+.h-52\.5 {
+  height: 13.125rem;
+}
+.w-77\.5 {
+  width: 19.375rem;
+}
+
+.text-md {
+  font-size: 0.9375rem;
+  line-height: 1.5;
 }

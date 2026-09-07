@@ -30,7 +30,7 @@ export default function Monogram({
       className={`relative flex items-center justify-center rounded-full border ${toneClasses} ${sizeMap[size]} ${className}`}
       aria-hidden="true"
     >
-      <span className="absolute inset-[3px] rounded-full border border-current/25" />
+      <span className="absolute inset-0.75 rounded-full border border-current/25" />
       <span className="font-display tracked-wide text-[0.7em]">
         L&nbsp;&amp;&nbsp;L
       </span>

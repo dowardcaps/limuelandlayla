@@ -29,75 +29,6 @@ const entourageData = {
   reception: "SHAKEY'S NAIC",
 };
 
-function ListSection({
-  title,
-  items,
-  delayBase = 0,
-}: {
-  title: string;
-  items: string[];
-  delayBase?: number;
-}) {
-  return (
-    <ScrollReveal delayMs={delayBase}>
-      <div className="flex flex-col items-center gap-4">
-        <h3 className="font-display text-2xl italic text-navy sm:text-3xl">
-          {title}
-        </h3>
-        <ul className="flex w-full max-w-md flex-col items-center gap-2">
-          {items.map((item, index) => (
-            <ScrollReveal
-              key={item}
-              as="li"
-              delayMs={delayBase + 40 + index * 30}
-              className="w-full text-center text-sm text-navy/80 sm:text-base"
-            >
-              {item}
-            </ScrollReveal>
-          ))}
-        </ul>
-      </div>
-    </ScrollReveal>
-  );
-}
-
-function ParentsSection({
-  title,
-  parents,
-  delayBase = 0,
-}: {
-  title: string;
-  parents: { father?: string; mother: string; fatherNote?: string };
-  delayBase?: number;
-}) {
-  return (
-    <ScrollReveal delayMs={delayBase}>
-      <div className="flex flex-col items-center gap-3">
-        <h3 className="font-display text-2xl italic text-navy sm:text-3xl">
-          {title}
-        </h3>
-        <div className="flex flex-col items-center gap-1 text-center">
-          {parents.mother && (
-            <p className="text-sm text-navy/80 sm:text-base">{parents.mother}</p>
-          )}
-          {parents.father && (
-            <p className="text-sm text-navy/80 sm:text-base">{parents.father}</p>
-          )}
-          {parents.fatherNote && (
-            <p className="mt-1 text-sm italic text-navy/60 sm:text-base">
-              {parents.fatherNote}
-            </p>
-          )}
-        </div>
-      </div>
-    </ScrollReveal>
-  );
-}
-
-// Update the component to use AOS data attributes instead of ScrollReveal
-
-// In each section, replace ScrollReveal with div data-aos attributes:
-
 export default function EntourageSection() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-20 md:px-10">
@@ -127,7 +58,55 @@ export default function EntourageSection() {
           </div>
         </div>
 
-        {/* Continue with other sections similarly */}
+        {/* Ninangs */}
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div className="flex flex-col items-center gap-4">
+            <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Ninangs</h3>
+            <ul className="flex w-full max-w-md flex-col items-center gap-2">
+              {entourageData.ninang.map((item, index) => (
+                <li 
+                  key={item} 
+                  className="w-full text-center text-sm text-navy/80 sm:text-base"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 30 + 250}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Parents */}
+        <div className="grid gap-10 sm:grid-cols-2">
+          <div data-aos="fade-up" data-aos-delay="300">
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Groom</h3>
+              <div className="flex flex-col items-center gap-1 text-center">
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.mother}</p>
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.father}</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="350">
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Bride</h3>
+              <div className="flex flex-col items-center gap-1 text-center">
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsBride.mother}</p>
+                <p className="text-sm italic text-navy/60 sm:text-base">{entourageData.parentsBride.father}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Reception */}
+        <div data-aos="fade-up" data-aos-delay="400">
+          <div className="flex flex-col items-center gap-2">
+            <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Reception</h3>
+            <p className="text-sm text-navy/80 sm:text-base">{entourageData.reception}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

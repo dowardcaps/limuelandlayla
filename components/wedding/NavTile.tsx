@@ -26,7 +26,7 @@ export default function NavTile({
     return (
       <Link
         href={href}
-        className={`group flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-full border border-navy/25 bg-white text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.03] focus-visible:-translate-y-0.5 focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:h-32 sm:w-32 md:h-36 md:w-36 ${rotate} ${className}`}
+        className={`group flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-full border border-navy/25 bg-white text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.03] focus-visible:-translate-y-0.5 focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:h-32 sm:w-32 md:h-36 md:w-36 ${rotate} ${className}`}
       >
         <span className="font-display text-base italic text-navy sm:text-lg">
           {label}
@@ -41,7 +41,7 @@ export default function NavTile({
   return (
     <Link
       href={href}
-      className={`group flex flex-col items-center justify-center gap-1.5 border border-navy/20 bg-white px-4 py-6 text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:px-6 sm:py-8 ${rotate} ${className}`}
+      className={`group flex flex-col items-center justify-center gap-1.5 border border-navy/20 bg-white px-4 py-6 text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:px-6 sm:py-8 ${rotate} ${className}`}
     >
       {eyebrow && (
         <span className="tracked text-[0.6rem] text-navy/70">{eyebrow}</span>

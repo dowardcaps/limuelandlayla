@@ -61,7 +61,7 @@ export default function DetailsSection() {
       <div className="mt-8 flex flex-col items-center gap-4 border-t border-hairline pt-6 text-center sm:mt-10 sm:pt-8" data-aos="fade-up" data-aos-delay="100">
         <a
           href={details.mapUrl}
-          className="tracked border border-navy/30 px-6 py-3 text-xs text-navy transition-colors duration-300 hover:bg-navy hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+          className="tracked border border-navy/30 px-6 py-3 text-xs text-navy transition-colors duration-300 hover:bg-navy hover:text-white focus-visible:outline focus-visible:outline-navy"
         >
           View Map &amp; Directions
         </a>

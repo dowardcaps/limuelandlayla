@@ -22,7 +22,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
       <header className="mx-auto flex w-full max-w-4xl flex-col items-center gap-3 border-b border-hairline px-4 py-4 sm:flex-row sm:justify-between sm:gap-4 sm:px-6 sm:py-6 md:px-10">
         <Link
           href="/"
-          className="flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:gap-3"
+          className="flex items-center gap-2 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:gap-3"
         >
           <Monogram size="sm" />
           <span className="font-script text-xl text-navy sm:text-2xl">
@@ -35,7 +35,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
             <Link
               key={link.href}
               href={link.href}
-              className="tracked text-xs text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs"
+              className="tracked text-xs text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs"
             >
               {link.label}
             </Link>

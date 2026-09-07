@@ -11,7 +11,7 @@ export default function RSVPSection() {
 
         <a
           href={rsvp.formUrl}
-          className="tracked mt-6 inline-block border border-navy bg-navy px-6 py-2.5 text-xs text-white transition-colors duration-300 hover:bg-navy-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:mt-8 sm:px-8 sm:py-3"
+          className="tracked mt-6 inline-block border border-navy bg-navy px-6 py-2.5 text-xs text-white transition-colors duration-300 hover:bg-navy-deep focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:mt-8 sm:px-8 sm:py-3"
         >
           Respond Now
         </a>
