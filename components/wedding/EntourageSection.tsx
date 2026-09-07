@@ -37,6 +37,7 @@ export default function EntourageSection() {
         <h2 className="font-display text-3xl text-navy sm:text-4xl">Entourage</h2>
         <div className="mt-1 h-px w-16 bg-navy/20" />
       </div>
+      
 
       <div className="flex flex-col gap-12 sm:gap-16">
                 {/* Parents */}
