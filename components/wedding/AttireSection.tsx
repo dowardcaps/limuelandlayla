@@ -1,8 +1,10 @@
 import { attire } from "../../data/content";
+import RevealOnScroll from "../RevealOnScroll";
 
 export default function AttireSection() {
   return (
-    <section className="mx-auto w-full max-w-2xl px-4 py-12 text-center sm:px-6 sm:py-20 md:px-10">
+    <RevealOnScroll>
+      <section className="mx-auto w-full max-w-2xl px-4 py-12 text-center sm:px-6 sm:py-20 md:px-10">
       <div data-aos="fade-up">
         <p className="tracked-wide text-[0.65rem] text-navy/70">Dress Code</p>
         <h2 className="mt-2 font-display text-2xl text-navy sm:text-3xl md:text-4xl">
@@ -39,5 +41,7 @@ export default function AttireSection() {
         ))}
       </ul>
     </section>
+    </RevealOnScroll>
+    
   );
 }
