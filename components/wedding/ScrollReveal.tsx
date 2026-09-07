@@ -1,6 +1,7 @@
 "use client";
 
 import { useInView } from "../../hooks/useInView";
+import { useEffect, useState } from "react";
 
 type ScrollRevealProps = {
   children: React.ReactNode;
@@ -24,13 +25,27 @@ export default function ScrollReveal({
   as = "div",
 }: ScrollRevealProps) {
   const { ref, isInView } = useInView<HTMLElement>();
+  const [isClient, setIsClient] = useState(false);
   const Tag = as;
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // On server-side or before hydration, render without animations
+  if (!isClient) {
+    return <Tag className={className}>{children}</Tag>;
+  }
 
   return (
     <Tag
       ref={ref as React.Ref<never>}
       className={`reveal ${isInView ? "reveal-visible" : ""} ${className}`}
-      style={{ transitionDelay: isInView ? `${delayMs}ms` : "0ms" }}
+      style={{ 
+        transitionDelay: isInView ? `${delayMs}ms` : "0ms",
+        // Safari compatibility
+        WebkitTransitionDelay: isInView ? `${delayMs}ms` : "0ms"
+      }}
     >
       {children}
     </Tag>

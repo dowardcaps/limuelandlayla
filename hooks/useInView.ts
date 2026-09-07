@@ -36,6 +36,13 @@ export function useInView<T extends HTMLElement>({
       return;
     }
 
+    // Check if IntersectionObserver is supported
+    if (typeof IntersectionObserver === "undefined") {
+      // Fallback for older browsers - show content immediately
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -45,11 +52,21 @@ export function useInView<T extends HTMLElement>({
           setIsInView(false);
         }
       },
-      { threshold, rootMargin }
+      { 
+        threshold: threshold, 
+        rootMargin: rootMargin,
+        // Safari compatibility
+        root: null
+      }
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+    
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
   }, [threshold, rootMargin, once]);
 
   return { ref, isInView };
