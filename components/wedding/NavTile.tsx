@@ -32,7 +32,7 @@ export default function NavTile({
           {label}
         </span>
         {eyebrow && (
-          <span className="tracked text-[0.55rem] text-navy/70">{eyebrow}</span>
+          <span className="tracked text-sm text-navy">{eyebrow}</span>
         )}
       </Link>
     );

@@ -35,7 +35,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
             <Link
               key={link.href}
               href={link.href}
-              className="tracked text-xs text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs"
+              className="tracked text-sm text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs"
             >
               {link.label}
             </Link>
