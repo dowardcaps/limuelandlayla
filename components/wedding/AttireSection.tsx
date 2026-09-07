@@ -11,7 +11,7 @@ export default function AttireSection() {
   return (
     <section className="mx-auto w-full max-w-2xl px-4 py-12 text-center sm:px-6 sm:py-20 md:px-10">
       <div data-aos="fade-up">
-        <p className="tracked-wide text-[0.65rem] text-navy/70">Dress Code</p>
+        <p className="tracked-wide text-md text-navy">Dress Code</p>
         <h2 className="mt-2 font-display text-2xl text-navy sm:text-3xl md:text-4xl">
           {attire.heading}
         </h2>
@@ -39,7 +39,7 @@ export default function AttireSection() {
               }}
               aria-hidden="true"
             />
-            <span className="text-[0.6rem] tracked text-navy/70 sm:text-[0.65rem]">
+            <span className="text-[0.6rem] tracked text-navy sm:text-[0.65rem]">
               {color.name}
             </span>
           </li>

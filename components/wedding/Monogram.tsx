@@ -31,7 +31,7 @@ export default function Monogram({
       aria-hidden="true"
     >
       <span className="absolute inset-0.75 rounded-full border border-current/25" />
-      <span className="font-display tracked-wide text-[0.7em]">
+      <span className="font-display tracked-wide text-md">
         L&nbsp;&amp;&nbsp;L
       </span>
     </div>

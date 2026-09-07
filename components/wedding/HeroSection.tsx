@@ -77,7 +77,7 @@ export default function HeroSection() {
 
         <div className="mt-12 flex flex-col items-center gap-2 text-navy/45 sm:mt-16">
           <span aria-hidden="true" className="h-8 w-px bg-navy/20 sm:h-10" />
-          <p className="tracked text-[0.6rem]" data-aos="fade-up" data-aos-delay="200">
+          <p className="tracked text-lg" data-aos="fade-up" data-aos-delay="200">
             Browse the sections above
           </p>
         </div>

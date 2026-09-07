@@ -32,7 +32,7 @@ export default function EntourageSection() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-20 md:px-10">
       <div className="mb-10 flex flex-col items-center gap-2 text-center sm:mb-12" data-aos="fade-up">
-        <p className="tracked-wide text-[0.65rem] text-navy/70">Our Special People</p>
+        <p className="tracked-wide text-md text-navy/70">Our Special People</p>
         <h2 className="font-display text-3xl text-navy sm:text-4xl">Entourage</h2>
         <div className="mt-1 h-px w-16 bg-navy/20" />
       </div>
