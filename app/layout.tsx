@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 // Import AOS styles
 import "aos/dist/aos.css";
+import AOSProvider from "../components/AOSProvider";
 
 const displaySerif = localFont({
   variable: "--font-display",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${displaySerif.variable} ${bodySerif.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body">
+        <AOSProvider />
         {children}
       </body>
     </html>

@@ -14,7 +14,9 @@ export function useInView<T extends HTMLElement>({
   once = true,
 }: UseInViewOptions = {}) {
   const ref = useRef<T | null>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(
+    () => typeof window !== "undefined" && !("IntersectionObserver" in window)
+  );
 
   useEffect(() => {
     const node = ref.current;
@@ -22,7 +24,6 @@ export function useInView<T extends HTMLElement>({
 
     // Check if IntersectionObserver is supported
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      setIsInView(true);
       return;
     }
 

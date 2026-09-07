@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import AOS from "aos";
+import { useRef } from "react";
 
 type ScrollRevealProps = {
   children: React.ReactNode;
@@ -21,18 +20,9 @@ export default function ScrollReveal({
   const ref = useRef<HTMLElement>(null);
   const Tag = as;
 
-  useEffect(() => {
-    // Initialize AOS if not already initialized
-    if (typeof window !== "undefined" && !document.querySelector("[data-aos]")) {
-      AOS.init({
-        duration: 800,
-        easing: "ease-in-out",
-        once: true,
-        offset: 50,
-        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-      });
-    }
-  }, []);
+  // AOS is initialized once, globally, by <AOSProvider /> in the root
+  // layout, which also re-scans the DOM on every route change — so this
+  // component only needs to render the data-aos attributes themselves.
 
   return (
     <Tag

@@ -15,7 +15,9 @@ export default function RevealOnScroll({
   delay = 0,
   once = true 
 }: RevealOnScrollProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(
+    () => typeof window !== "undefined" && !("IntersectionObserver" in window)
+  );
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +25,6 @@ export default function RevealOnScroll({
     if (!element) return;
 
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      setIsVisible(true);
       return;
     }
 

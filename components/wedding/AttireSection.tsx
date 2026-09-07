@@ -1,10 +1,15 @@
 import { attire } from "../../data/content";
-import RevealOnScroll from "../RevealOnScroll";
+
+// Note: this section previously wrapped its <section> in <RevealOnScroll>
+// (a separate IntersectionObserver-based fade-in) *and* used data-aos on
+// its children (AOS-driven fade-in). Two independent scroll-reveal systems
+// were fighting over the same elements' opacity/transform, which caused
+// inconsistent or stuck animations. Standardized on data-aos here, matching
+// every other section in the app.
 
 export default function AttireSection() {
   return (
-    <RevealOnScroll>
-      <section className="mx-auto w-full max-w-2xl px-4 py-12 text-center sm:px-6 sm:py-20 md:px-10">
+    <section className="mx-auto w-full max-w-2xl px-4 py-12 text-center sm:px-6 sm:py-20 md:px-10">
       <div data-aos="fade-up">
         <p className="tracked-wide text-[0.65rem] text-navy/70">Dress Code</p>
         <h2 className="mt-2 font-display text-2xl text-navy sm:text-3xl md:text-4xl">
@@ -41,7 +46,5 @@ export default function AttireSection() {
         ))}
       </ul>
     </section>
-    </RevealOnScroll>
-    
   );
 }

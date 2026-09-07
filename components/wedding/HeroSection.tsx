@@ -2,7 +2,6 @@ import Monogram from "./Monogram";
 import PhotoCard from "./PhotoCard";
 import SaveTheDate from "./SaveTheDate";
 import NavTile from "./NavTile";
-import ScrollReveal from "./ScrollReveal";
 import SiteFooter from "./SiteFooter";
 import { couple, weddingDate } from "../../data/content";
 

@@ -1,4 +1,3 @@
-import ScrollReveal from "./ScrollReveal";
 
 // Entourage data
 const entourageData = {
