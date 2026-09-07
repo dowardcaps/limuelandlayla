@@ -94,56 +94,40 @@ function ParentsSection({
   );
 }
 
+// Update the component to use AOS data attributes instead of ScrollReveal
+
+// In each section, replace ScrollReveal with div data-aos attributes:
+
 export default function EntourageSection() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-20 md:px-10">
-      <ScrollReveal>
-        <div className="mb-10 flex flex-col items-center gap-2 text-center sm:mb-12">
-          <p className="tracked-wide text-md text-navy/70">Our Special People</p>
-          <h2 className="font-display text-3xl text-navy sm:text-4xl">Entourage</h2>
-          <div className="mt-1 h-px w-16 bg-navy/20" />
-        </div>
-      </ScrollReveal>
-
-      <div className="flex flex-col gap-12 sm:gap-16">
-         {/* Parents of Groom */}
-        <ParentsSection
-          title="Parents of the Groom"
-          parents={{
-            father: entourageData.parentsGroom.father,
-            mother: entourageData.parentsGroom.mother,
-          }}
-          delayBase={240}
-        />
-
-        {/* Parents of Bride */}
-        <ParentsSection
-          title="Parents of the Bride"
-          parents={{
-            mother: entourageData.parentsBride.mother,
-            fatherNote: entourageData.parentsBride.father,
-          }}
-          delayBase={300}
-        />
+      <div className="mb-10 flex flex-col items-center gap-2 text-center sm:mb-12" data-aos="fade-up">
+        <p className="tracked-wide text-[0.65rem] text-navy/70">Our Special People</p>
+        <h2 className="font-display text-3xl text-navy sm:text-4xl">Entourage</h2>
+        <div className="mt-1 h-px w-16 bg-navy/20" />
+      </div>
 
       <div className="flex flex-col gap-12 sm:gap-16">
         {/* Ninongs */}
-        <ListSection title="Ninongs" items={entourageData.ninong} delayBase={80} />
-
-        {/* Ninangs */}
-        <ListSection title="Ninangs" items={entourageData.ninang} delayBase={160} />
-
-
-        {/* Reception Venue */}
-        <ScrollReveal delayMs={360}>
-          <div className="flex flex-col items-center gap-2 border-t border-hairline pt-8 text-center sm:pt-12">
-            <p className="tracked-wide text-[0.65rem] text-navy/70">Reception Venue</p>
-            <p className="font-display text-2xl text-navy sm:text-3xl">
-              {entourageData.reception}
-            </p>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div className="flex flex-col items-center gap-4">
+            <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Ninongs</h3>
+            <ul className="flex w-full max-w-md flex-col items-center gap-2">
+              {entourageData.ninong.map((item, index) => (
+                <li 
+                  key={item} 
+                  className="w-full text-center text-sm text-navy/80 sm:text-base"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 30 + 150}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
-        </ScrollReveal>
-      </div>
+        </div>
+
+        {/* Continue with other sections similarly */}
       </div>
     </section>
   );

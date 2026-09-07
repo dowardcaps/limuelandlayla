@@ -1,12 +1,14 @@
 "use client";
 
-import { useInView } from "../../hooks/useInView";
+import { useEffect, useRef } from "react";
+import AOS from "aos";
 
 type ScrollRevealProps = {
   children: React.ReactNode;
   className?: string;
   delayMs?: number;
   as?: "div" | "section" | "li";
+  animation?: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "zoom-in" | "zoom-out" | "flip-up" | "flip-down" | "flip-left" | "flip-right";
 };
 
 export default function ScrollReveal({
@@ -14,15 +16,30 @@ export default function ScrollReveal({
   className = "",
   delayMs = 0,
   as = "div",
+  animation = "fade-up",
 }: ScrollRevealProps) {
-  const { ref, isInView } = useInView<HTMLElement>();
+  const ref = useRef<HTMLElement>(null);
   const Tag = as;
+
+  useEffect(() => {
+    // Initialize AOS if not already initialized
+    if (typeof window !== "undefined" && !document.querySelector("[data-aos]")) {
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+        offset: 50,
+        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      });
+    }
+  }, []);
 
   return (
     <Tag
       ref={ref as React.Ref<never>}
-      className={`reveal ${isInView ? "reveal-visible" : ""} ${className}`}
-      style={{ transitionDelay: isInView ? `${delayMs}ms` : "0ms" }}
+      className={className}
+      data-aos={animation}
+      data-aos-delay={delayMs}
     >
       {children}
     </Tag>

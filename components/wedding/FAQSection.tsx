@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { faqs } from "../../data/content";
-import ScrollReveal from "./ScrollReveal";
 
 function FAQItem({
   question,
@@ -21,7 +20,11 @@ function FAQItem({
   const buttonId = `faq-button-${index}`;
 
   return (
-    <ScrollReveal as="div" delayMs={index * 60} className="border-b border-white/30 last:border-b-0">
+    <div 
+      className="border-b border-white/30 last:border-b-0"
+      data-aos="fade-up"
+      data-aos-delay={index * 60 + 100}
+    >
       <h3>
         <button
           id={buttonId}
@@ -29,9 +32,9 @@ function FAQItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="flex w-full items-center cursor-pointer justify-between gap-3 py-5 text-left transition-colors duration-200 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:gap-4 sm:py-6"
+          className="flex w-full items-center justify-between gap-3 py-5 text-left transition-colors duration-200 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:gap-4 sm:py-6"
         >
-          <span className="font-body text-base font-bold text-navy sm:text-lg md:text-xl">
+          <span className="font-body text-base font-bold text-white sm:text-lg md:text-xl">
             {question}
           </span>
           <svg
@@ -44,7 +47,7 @@ function FAQItem({
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className={`shrink-0 text-navy transition-transform duration-300 ${
+            className={`shrink-0 text-white transition-transform duration-300 ${
               isOpen ? "rotate-180" : "rotate-0"
             }`}
             aria-hidden="true"
@@ -61,12 +64,12 @@ function FAQItem({
         style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p className="pb-5 pr-6 text-base leading-relaxed text-navy sm:pb-6 sm:pr-8 sm:text-lg">
+          <p className="pb-5 pr-6 text-base leading-relaxed text-white sm:pb-6 sm:pr-8 sm:text-lg">
             {answer}
           </p>
         </div>
       </div>
-    </ScrollReveal>
+    </div>
   );
 }
 
@@ -74,17 +77,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 sm:py-24">
+    <section className="bg-navy py-16 sm:py-24">
       <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 md:px-10">
-        <ScrollReveal>
-          <div className="flex flex-col items-center gap-3 text-center">
-            <p className="tracked-wide text-md text-navy">Good to Know</p>
-            <h2 className="font-display text-4xl font-bold text-white sm:text-5xl">
-              Frequently Asked Questions
-            </h2>
-            <div className="mt-2 h-px w-16 bg-white/50" />
-          </div>
-        </ScrollReveal>
+        <div className="flex flex-col items-center gap-3 text-center" data-aos="fade-up">
+          <p className="tracked-wide text-sm text-white/90">Good to Know</p>
+          <h2 className="font-display text-4xl font-bold text-white sm:text-5xl">
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-2 h-px w-16 bg-white/50" />
+        </div>
 
         <div className="mt-10 sm:mt-12">
           {faqs.map((item, index) => (

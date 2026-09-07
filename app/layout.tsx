@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+// Import AOS styles
+import "aos/dist/aos.css";
 
-// Self-hosted fonts (rather than next/font/google) so the invitation has no
-// runtime dependency on fonts.googleapis.com and renders identically offline.
 const displaySerif = localFont({
   variable: "--font-display",
   src: [
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   description: "You are invited to the wedding of Limuel & Layla.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth" // <-- Add this attribute
+      data-scroll-behavior="smooth"
       className={`${displaySerif.variable} ${bodySerif.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body">

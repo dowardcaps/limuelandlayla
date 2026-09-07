@@ -35,7 +35,11 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-4 py-12 text-center sm:gap-10 sm:px-6 sm:py-16">
-      <div className={`intro-fade stage-${stage} flex flex-col items-center gap-2 sm:gap-3`}>
+      <div 
+        className={`intro-fade stage-${stage} flex flex-col items-center gap-2 sm:gap-3`}
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         <p className="tracked-wide text-[0.7rem] text-navy/70 sm:text-md">
           Together with their families
         </p>
@@ -54,6 +58,8 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
         onKeyDown={handleKeyDown}
         aria-label="Open the wedding invitation"
         className={`envelope-scene stage-${stage} group relative h-[170px] w-[250px] cursor-pointer outline-none sm:h-[190px] sm:w-[280px] md:h-[210px] md:w-[310px] touch-manipulation`}
+        data-aos="zoom-in"
+        data-aos-delay="200"
       >
         {/* Invitation card */}
         <div className="envelope-card absolute left-1/2 top-[10%] z-10 h-[80%] w-[88%] -translate-x-1/2 border border-hairline bg-white paper-shadow">
@@ -81,7 +87,11 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
         </div>
       </button>
 
-      <p className={`intro-fade stage-${stage} tap-hint font-display text-base italic sm:text-lg`}>
+      <p 
+        className={`intro-fade stage-${stage} tap-hint font-display text-base italic sm:text-lg`}
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         {isOpening ? "Opening…" : "Tap the envelope to open"}
       </p>
     </div>
