@@ -39,15 +39,12 @@ export default function HeroSection() {
           </div>
 
           {/* Save the date */}
-          <div className="sm:col-start-1 sm:col-span-2 sm:row-start-2" data-aos="fade-up" data-aos-delay="150">
+          <div className="sm:col-start-1 sm:col-span-3 sm:row-start-2" data-aos="fade-up" data-aos-delay="150">
             <SaveTheDate rotate="rotate-1" />
           </div>
 
-          {/* Nav tiles */}
-          <div className="sm:col-start-3 sm:col-span-2 sm:row-start-2" data-aos="fade-up" data-aos-delay="200">
-            <NavTile href="/rsvp" eyebrow="Kindly" label="RSVP here" rotate="-rotate-1" />
-          </div>
-          <div className="sm:col-start-5 sm:col-span-2 sm:row-start-2" data-aos="fade-up" data-aos-delay="250">
+          {/* Nav tile */}
+          <div className="sm:col-start-4 sm:col-span-3 sm:row-start-2" data-aos="fade-up" data-aos-delay="250">
             <NavTile href="/details" label="Click for the DETAILS" rotate="rotate-1" />
           </div>
 
@@ -77,7 +74,7 @@ export default function HeroSection() {
 
         <div className="mt-12 flex flex-col items-center gap-2 text-navy/45 sm:mt-16">
           <span aria-hidden="true" className="h-8 w-px bg-navy/20 sm:h-10" />
-          <p className="tracked text-lg" data-aos="fade-up" data-aos-delay="200">
+          <p className="tracked text-[0.6rem]" data-aos="fade-up" data-aos-delay="200">
             Browse the sections above
           </p>
         </div>

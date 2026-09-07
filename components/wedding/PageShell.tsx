@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Monogram from "./Monogram";
@@ -7,8 +7,8 @@ import { couple } from "../../data/content";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
+  { href: "/home", label: "Home" },
   { href: "/details", label: "Details" },
-  { href: "/rsvp", label: "RSVP" },
   { href: "/entourage", label: "Entourage" },
   { href: "/attire", label: "Attire" },
   { href: "/faqs", label: "FAQs" },
@@ -30,7 +30,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
           className="flex items-center gap-3 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:gap-4"
         >
           <Monogram size="md" />
-          <span className="font-script text-2xl text-navy">
+          <span className="font-script text-xl text-navy sm:text-2xl">
             {couple.first} &amp; {couple.second}
           </span>
         </Link>
@@ -43,8 +43,8 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
                 key={link.href}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`tracked text-md text-navy transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs ${
-                  isActive ? "underline font-bold underline-offset-4 text-navy" : ""
+                className={`tracked text-sm text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs ${
+                  isActive ? "underline underline-offset-4 text-navy" : ""
                 }`}
               >
                 {link.label}

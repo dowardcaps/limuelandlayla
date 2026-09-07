@@ -82,9 +82,3 @@ export const faqs = [
       "Seats are limited, so only guests named on the invitation are reserved a seat. Thank you for understanding.",
   },
 ];
-
-export const rsvp = {
-  heading: "RSVP",
-  note: "Kindly respond by [RSVP DEADLINE] so we may finalize our arrangements.",
-  formUrl: "#",
-};

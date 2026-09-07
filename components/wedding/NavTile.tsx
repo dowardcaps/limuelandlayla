@@ -11,7 +11,7 @@ type NavTileProps = {
 
 /**
  * A tappable piece of "stationery" that links to a section's own page
- * (RSVP, DETAILS, FAQs, ATTIRE). Styled as printed card stock rather
+ * (DETAILS, FAQs, ATTIRE, ENTOURAGE). Styled as printed card stock rather
  * than a conventional web button.
  */
 export default function NavTile({

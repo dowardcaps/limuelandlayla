@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
  * layout persists across client-side navigations in the App Router, while
  * a page-level component gets unmounted/remounted on every route change.
  * When this previously lived on `app/page.tsx` only, every other route
- * (`/details`, `/rsvp`, `/attire`, `/faqs`, `/entourage`) rendered elements
+ * (`/home`, `/details`, `/attire`, `/faqs`, `/entourage`) rendered elements
  * with `data-aos` attributes but AOS was never initialized for them, so
  * their `[data-aos]` content stayed at `opacity: 0` forever (AOS's stylesheet
  * hides elements until it adds the `.aos-animate` class itself). That was

@@ -26,7 +26,7 @@ export default function DetailsSection() {
   return (
     <section className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-20 md:px-10">
       <div className="mb-8 flex flex-col items-center gap-2 text-center sm:mb-10" data-aos="fade-up">
-        <p className="tracked-wide text-md text-navy">The Celebration</p>
+        <p className="tracked-wide text-[0.65rem] text-navy/70">The Celebration</p>
         <h2 className="font-display text-2xl text-navy sm:text-3xl md:text-4xl">Details</h2>
       </div>
 

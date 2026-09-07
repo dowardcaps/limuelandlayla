@@ -82,7 +82,7 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 50% 100%)" }}
           />
           <div className="envelope-seal absolute left-1/2 top-[38%] z-30 -translate-x-1/2 -translate-y-1/2">
-            <Monogram size="md" tone="navy" />
+            <Monogram size="sm" tone="navy" />
           </div>
         </div>
       </button>
