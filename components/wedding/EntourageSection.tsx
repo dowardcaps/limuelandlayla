@@ -39,6 +39,29 @@ export default function EntourageSection() {
       </div>
 
       <div className="flex flex-col gap-12 sm:gap-16">
+                {/* Parents */}
+        <div className="grid gap-10 sm:grid-cols-2">
+          <div data-aos="fade-up" data-aos-delay="300">
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Groom</h3>
+              <div className="flex flex-col items-center gap-1 text-center">
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.mother}</p>
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.father}</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="350">
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Bride</h3>
+              <div className="flex flex-col items-center gap-1 text-center">
+                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsBride.mother}</p>
+                <p className="text-sm italic text-navy/60 sm:text-base">{entourageData.parentsBride.father}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Ninongs */}
         <div data-aos="fade-up" data-aos-delay="100">
           <div className="flex flex-col items-center gap-4">
@@ -74,29 +97,6 @@ export default function EntourageSection() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
-        {/* Parents */}
-        <div className="grid gap-10 sm:grid-cols-2">
-          <div data-aos="fade-up" data-aos-delay="300">
-            <div className="flex flex-col items-center gap-3">
-              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Groom</h3>
-              <div className="flex flex-col items-center gap-1 text-center">
-                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.mother}</p>
-                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsGroom.father}</p>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="350">
-            <div className="flex flex-col items-center gap-3">
-              <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Parents of the Bride</h3>
-              <div className="flex flex-col items-center gap-1 text-center">
-                <p className="text-sm text-navy/80 sm:text-base">{entourageData.parentsBride.mother}</p>
-                <p className="text-sm italic text-navy/60 sm:text-base">{entourageData.parentsBride.father}</p>
-              </div>
-            </div>
           </div>
         </div>
 
