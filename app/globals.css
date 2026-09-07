@@ -33,10 +33,9 @@ body {
   color: var(--color-ink);
   font-size: 16px;
   line-height: 1.6;
-  -webkit-text-size-adjust: 100%;
 }
 
-/* Typography improvements for readability */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   color: var(--color-navy);
@@ -63,37 +62,27 @@ p {
   box-shadow: 0 1px 3px rgba(31, 42, 68, 0.06), 0 8px 18px -10px rgba(31, 42, 68, 0.14);
 }
 
-/* ---------- Envelope opening sequence ---------- */
+/* ---------- Envelope opening sequence - Simplified for Safari ---------- */
 
 .envelope-scene {
   perspective: 1800px;
-  -webkit-perspective: 1800px;
 }
 
 .envelope-flap {
   transform-origin: top center;
-  -webkit-transform-origin: top center;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   transition: transform 0.85s cubic-bezier(0.65, 0, 0.35, 1),
     opacity 0.6s ease 0.3s;
-  -webkit-transition: -webkit-transform 0.85s cubic-bezier(0.65, 0, 0.35, 1),
-    opacity 0.6s ease 0.3s;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .stage-flapOpen .envelope-flap,
 .stage-cardRise .envelope-flap,
 .stage-expand .envelope-flap {
   transform: rotateX(-165deg);
-  -webkit-transform: rotateX(-165deg);
   opacity: 0;
 }
 
 .envelope-seal {
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
 }
 
 .stage-sealBreak .envelope-seal,
@@ -101,48 +90,34 @@ p {
 .stage-cardRise .envelope-seal,
 .stage-expand .envelope-seal {
   transform: scale(0.4) rotate(25deg);
-  -webkit-transform: scale(0.4) rotate(25deg);
   opacity: 0;
 }
 
 .envelope-card {
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s,
     opacity 0.7s ease 0.35s;
-  -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s,
-    opacity 0.7s ease 0.35s;
-  transform: translateY(0%);
-  -webkit-transform: translateY(0%);
-  will-change: transform, opacity;
-  -webkit-will-change: transform, opacity;
 }
 
 .stage-cardRise .envelope-card,
 .stage-expand .envelope-card {
   transform: translateY(-64%) scale(1.03);
-  -webkit-transform: translateY(-64%) scale(1.03);
 }
 
 .envelope-body {
-  transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
-  -webkit-transition: opacity 0.6s ease 0.5s, -webkit-transform 0.6s ease 0.5s;
+  transition: opacity 0.6s ease 0.5s;
 }
 
 .stage-expand .envelope-body {
   opacity: 0;
-  transform: scale(0.96);
-  -webkit-transform: scale(0.96);
 }
 
 .intro-fade {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .stage-cardRise .intro-fade,
 .stage-expand .intro-fade {
   opacity: 0;
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
 }
 
 /* ---------- Scroll-triggered reveal ---------- */
@@ -150,53 +125,32 @@ p {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  -webkit-transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  -webkit-transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    -webkit-transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-  -webkit-will-change: opacity, transform;
 }
 
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
-  -webkit-transform: translateY(0);
 }
 
 .collage-enter {
   animation: collageEnter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
-  -webkit-animation: collageEnter 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes collageEnter {
   from {
     opacity: 0;
     transform: translateY(18px);
-    -webkit-transform: translateY(18px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes collageEnter {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
 
 .tap-hint {
   animation: tapHint 2.4s ease-in-out infinite;
-  -webkit-animation: tapHint 2.4s ease-in-out infinite;
 }
 
 @keyframes tapHint {
@@ -204,27 +158,14 @@ p {
   100% {
     opacity: 0.55;
     transform: translateY(0);
-    -webkit-transform: translateY(0);
   }
   50% {
     opacity: 1;
     transform: translateY(3px);
-    -webkit-transform: translateY(3px);
   }
 }
 
-@-webkit-keyframes tapHint {
-  0%,
-  100% {
-    opacity: 0.55;
-    -webkit-transform: translateY(0);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(3px);
-  }
-}
-
+/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .envelope-flap,
   .envelope-seal,
@@ -232,42 +173,26 @@ p {
   .envelope-body,
   .intro-fade,
   .reveal {
-    transition-duration: 0.01s !important;
-    animation-duration: 0.01s !important;
-    -webkit-transition-duration: 0.01s !important;
-    -webkit-animation-duration: 0.01s !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
   .collage-enter,
   .tap-hint {
     animation: none !important;
-    -webkit-animation: none !important;
   }
 }
 
-/* ---------- Mobile Responsive Improvements ---------- */
+/* ---------- Mobile Responsive ---------- */
 
-/* Touch-friendly tap targets */
 button, 
 a, 
-[role="button"],
-input[type="submit"],
-input[type="button"] {
+[role="button"] {
   min-height: 44px;
   min-width: 44px;
   touch-action: manipulation;
 }
 
-/* Improved contrast for text */
-.text-navy\/55, 
-.text-navy\/50, 
-.text-navy\/45,
-.text-navy\/60,
-.text-navy\/70 {
-  color: var(--color-navy) !important;
-  opacity: 0.7;
-}
-
-/* Ensure all text has sufficient contrast */
+/* Better contrast */
 .bg-navy .text-white\/75 {
   color: rgba(255, 255, 255, 0.85) !important;
 }
@@ -276,54 +201,25 @@ input[type="button"] {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* Mobile-first responsive adjustments */
 @media (max-width: 640px) {
   body {
     font-size: 15px;
   }
-  
   .tracked {
     letter-spacing: 0.15em;
   }
-  
   .tracked-wide {
     letter-spacing: 0.22em;
   }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-}
-
 /* Prevent horizontal scrolling */
-img, 
-svg, 
-video, 
-canvas {
+img, svg, video, canvas {
   max-width: 100%;
   height: auto;
 }
 
-/* Better touch feedback */
-@media (hover: none) {
-  .hover\:scale-\[1\.03\] {
-    transform: none !important;
-  }
-  
-  .hover\:-translate-y-0\.5 {
-    transform: none !important;
-  }
-}
-
-/* Improve scroll behavior */
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Better tap highlight for mobile */
-* {
-  -webkit-tap-highlight-color: rgba(31, 42, 68, 0.1);
 }
