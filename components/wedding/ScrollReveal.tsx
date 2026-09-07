@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import AOS from "aos";
+import { useRef } from "react";
 
 type ScrollRevealProps = {
   children: React.ReactNode;
@@ -20,19 +19,6 @@ export default function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef<HTMLElement>(null);
   const Tag = as;
-
-  useEffect(() => {
-    // Initialize AOS if not already initialized
-    if (typeof window !== "undefined" && !document.querySelector("[data-aos]")) {
-      AOS.init({
-        duration: 800,
-        easing: "ease-in-out",
-        once: true,
-        offset: 50,
-        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-      });
-    }
-  }, []);
 
   return (
     <Tag
