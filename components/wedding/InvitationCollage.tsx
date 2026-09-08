@@ -60,7 +60,7 @@ export default function InvitationCollage() {
             className="sm:col-start-1 sm:col-span-2 sm:row-start-3"
           />
           <div className="flex items-center justify-center sm:col-start-3 sm:col-span-2 sm:row-start-3">
-            <NavTile href="#faqs" label="FAQs" shape="circle" />
+            <NavTile href="#faqs" label="FAQs" shape="circle" circleSize="lg" />
           </div>
           <PhotoCard
             alt="A quiet moment"

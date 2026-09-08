@@ -6,7 +6,18 @@ type NavTileProps = {
   label: string;
   rotate?: string;
   shape?: "card" | "circle";
+  circleSize?: "md" | "lg";
   className?: string;
+};
+
+const circleSizeMap = {
+  md: "h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36",
+  lg: "h-36 w-36 sm:h-44 sm:w-44 md:h-52 md:w-52",
+};
+
+const circleLabelSizeMap = {
+  md: "text-base sm:text-lg",
+  lg: "text-lg sm:text-xl md:text-2xl",
 };
 
 /**
@@ -20,15 +31,16 @@ export default function NavTile({
   label,
   rotate = "rotate-0",
   shape = "card",
+  circleSize = "lg",
   className = "",
 }: NavTileProps) {
   if (shape === "circle") {
     return (
       <Link
         href={href}
-        className={`group flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-full border border-navy/25 bg-white text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.03] focus-visible:-translate-y-0.5 focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:h-32 sm:w-32 md:h-36 md:w-36 ${rotate} ${className}`}
+        className={`group flex flex-col items-center justify-center gap-1 rounded-full border border-navy/25 bg-white text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.03] focus-visible:-translate-y-0.5 focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] ${circleSizeMap[circleSize]} ${rotate} ${className}`}
       >
-        <span className="font-display text-base italic text-navy sm:text-lg">
+        <span className={`font-display italic text-navy ${circleLabelSizeMap[circleSize]}`}>
           {label}
         </span>
         {eyebrow && (
