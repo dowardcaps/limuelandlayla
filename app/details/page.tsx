@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function DetailsPage() {
   return (
-    <PageShell>
+    <PageShell currentLabel="Details">
       <DetailsSection />
     </PageShell>
   );

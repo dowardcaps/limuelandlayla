@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function FAQsPage() {
   return (
-    <PageShell>
+    <PageShell currentLabel="FAQs">
       <FAQSection />
     </PageShell>
   );

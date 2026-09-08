@@ -2,12 +2,11 @@ import Monogram from "./Monogram";
 import PhotoCard from "./PhotoCard";
 import SaveTheDate from "./SaveTheDate";
 import NavTile from "./NavTile";
-import SiteFooter from "./SiteFooter";
 import { couple, weddingDate } from "../../data/content";
 
 export default function HeroSection() {
   return (
-    <main className="collage-enter">
+    <div className="collage-enter">
       <section className="mx-auto w-full max-w-4xl px-4 pb-12 pt-10 sm:px-5 sm:pb-16 sm:pt-14 md:px-10 md:pt-20">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-6 sm:gap-6">
           {/* Header / monogram card */}
@@ -79,8 +78,6 @@ export default function HeroSection() {
           </p>
         </div>
       </section>
-
-      <SiteFooter />
-    </main>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AttirePage() {
   return (
-    <PageShell>
+    <PageShell currentLabel="Attire">
       <AttireSection />
     </PageShell>
   );

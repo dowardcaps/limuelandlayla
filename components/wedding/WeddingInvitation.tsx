@@ -1,15 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import EnvelopeIntro from "./EnvelopeIntro";
-import HeroSection from "./HeroSection";
 
+/**
+ * "/" is the envelope intro only. Opening the envelope now navigates to
+ * "/home" (the persistent home page) instead of swapping in HeroSection
+ * in place — so "/" is a one-time entrance, and "/home" is the actual,
+ * always-reachable home page used by every other page's "Home" link.
+ */
 export default function WeddingInvitation() {
-  const [opened, setOpened] = useState(false);
+  const router = useRouter();
 
-  if (!opened) {
-    return <EnvelopeIntro onOpened={() => setOpened(true)} />;
-  }
-
-  return <HeroSection />;
+  return <EnvelopeIntro onOpened={() => router.push("/home")} />;
 }

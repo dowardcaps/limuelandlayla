@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageShell from "../../components/wedding/PageShell";
 import HeroSection from "../../components/wedding/HeroSection";
 
 export const metadata: Metadata = {
@@ -6,12 +7,14 @@ export const metadata: Metadata = {
 };
 
 /**
- * The "always available" home page: the same collage of photos and section
- * tiles shown at "/" once the envelope is opened, but reachable directly
- * (via the Home link in PageShell's nav) without replaying the envelope
- * animation every time. "/" itself is unchanged and still opens with the
- * sealed envelope.
+ * The persistent home page: the collage of photos and section tiles,
+ * reachable from every other page via the header. Opening the envelope on
+ * "/" redirects here; "/" itself never renders this content directly.
  */
 export default function HomePage() {
-  return <HeroSection />;
+  return (
+    <PageShell>
+      <HeroSection />
+    </PageShell>
+  );
 }

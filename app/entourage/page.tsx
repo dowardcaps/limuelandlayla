@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function EntouragePage() {
   return (
-    <PageShell>
+    <PageShell currentLabel="Entourage">
       <EntourageSection />
     </PageShell>
   );

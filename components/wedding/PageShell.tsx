@@ -4,29 +4,28 @@ import Link from "next/link";
 import Monogram from "./Monogram";
 import SiteFooter from "./SiteFooter";
 import { couple } from "../../data/content";
-import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { href: "/home", label: "Home" },
-  { href: "/details", label: "Details" },
-  { href: "/entourage", label: "Entourage" },
-  { href: "/attire", label: "Attire" },
-  { href: "/faqs", label: "FAQs" },
-];
+type PageShellProps = {
+  children: React.ReactNode;
+  /**
+   * The current page's name, shown as "‹ Back | {currentLabel}" in the
+   * header. Omit this on the Home page itself — Home is the hub everything
+   * else backs out to, so it has nothing to "go back" to.
+   */
+  currentLabel?: string;
+};
 
 /**
- * Shared chrome for every route below the home page: a small header that
- * links back to Home plus the other sections, and the site footer.
- * Keeps each app/<route>/page.tsx focused on just its own content.
+ * Shared chrome for every page in the app, including Home: a header with
+ * the couple's monogram (always linking to "/home") and, on every page
+ * except Home, a "‹ Back | PageName" indicator — plus the site footer.
  */
-export default function PageShell({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-
+export default function PageShell({ children, currentLabel }: PageShellProps) {
   return (
     <div className="flex min-h-screen flex-col bg-paper">
       <header className="mx-auto flex w-full max-w-4xl flex-col items-center gap-3 border-b border-hairline px-4 py-4 sm:flex-row sm:justify-between sm:gap-4 sm:px-6 sm:py-6 md:px-10">
         <Link
-          href="/"
+          href="/home"
           className="flex items-center gap-3 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:gap-4"
         >
           <Monogram size="md" />
@@ -35,23 +34,22 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
           </span>
         </Link>
 
-        <nav className="flex flex-wrap items-center justify-center gap-3 gap-y-2 sm:gap-x-6">
-          {navLinks.map((link) => {
-            const isActive = link.href === pathname;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                aria-current={isActive ? "page" : undefined}
-                className={`tracked text-sm text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy sm:text-xs ${
-                  isActive ? "underline underline-offset-4 text-navy" : ""
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+        {currentLabel && (
+          <div className="flex items-center gap-2 text-sm sm:text-base">
+            <Link
+              href="/home"
+              className="tracked flex items-center gap-1 font-medium text-navy/70 transition-colors duration-300 hover:text-navy focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy"
+            >
+              <span aria-hidden="true">&lsaquo;</span> Back
+            </Link>
+            <span aria-hidden="true" className="text-navy/30">
+              |
+            </span>
+            <span aria-current="page" className="tracked font-semibold text-navy">
+              {currentLabel}
+            </span>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">{children}</main>
