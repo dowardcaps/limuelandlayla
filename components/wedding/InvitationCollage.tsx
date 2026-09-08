@@ -3,7 +3,6 @@ import PhotoCard from "./PhotoCard";
 import SaveTheDate from "./SaveTheDate";
 import NavTile from "./NavTile";
 import DetailsSection from "./DetailsSection";
-import RSVPSection from "./RSVPSection";
 import AttireSection from "./AttireSection";
 import FAQSection from "./FAQSection";
 import { couple, weddingDate } from "../../data/content";
@@ -80,9 +79,6 @@ export default function InvitationCollage() {
       {/* ---------------- Full sections ---------------- */}
       <div className="border-t border-hairline">
         <DetailsSection />
-      </div>
-      <div className="border-t border-hairline">
-        <RSVPSection />
       </div>
       <div className="border-t border-hairline">
         <AttireSection />
