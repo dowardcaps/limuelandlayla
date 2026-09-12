@@ -8,6 +8,8 @@ type NavTileProps = {
   shape?: "card" | "circle";
   circleSize?: "md" | "lg";
   className?: string;
+  /** Bento-style rounded corners on the "card" shape, used on the Home grid. */
+  rounded?: boolean;
 };
 
 const circleSizeMap = {
@@ -33,6 +35,7 @@ export default function NavTile({
   shape = "card",
   circleSize = "lg",
   className = "",
+  rounded = false,
 }: NavTileProps) {
   if (shape === "circle") {
     return (
@@ -53,7 +56,9 @@ export default function NavTile({
   return (
     <Link
       href={href}
-      className={`group flex flex-col items-center justify-center gap-1.5 border border-navy/20 bg-white px-4 py-6 text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:px-6 sm:py-8 ${rotate} ${className}`}
+      className={`group flex h-full flex-col items-center justify-center gap-1.5 border border-navy/20 bg-white px-4 py-6 text-center paper-shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy active:scale-[0.98] sm:px-6 sm:py-8 ${
+        rounded ? "rounded-2xl" : ""
+      } ${rotate} ${className}`}
     >
       {eyebrow && (
         <span className="tracked text-[0.6rem] text-navy/70">{eyebrow}</span>

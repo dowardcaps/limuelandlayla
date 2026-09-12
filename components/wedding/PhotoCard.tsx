@@ -5,6 +5,8 @@ type PhotoCardProps = {
   rotate?: string;
   aspect?: string;
   className?: string;
+  /** Bento-style rounded corners, used on the Home grid. Other pages keep the sharp-cornered stationery look by default. */
+  rounded?: boolean;
 };
 
 /**
@@ -19,12 +21,19 @@ export default function PhotoCard({
   rotate = "rotate-0",
   aspect = "aspect-[4/5]",
   className = "",
+  rounded = false,
 }: PhotoCardProps) {
   return (
     <figure
-      className={`border border-hairline bg-white p-1.5 paper-shadow sm:p-2 ${rotate} ${className}`}
+      className={`border border-hairline bg-white p-1.5 paper-shadow sm:p-2 ${
+        rounded ? "rounded-2xl overflow-hidden" : ""
+      } ${rotate} ${className}`}
     >
-      <div className={`relative w-full overflow-hidden bg-paper-dim ${aspect}`}>
+      <div
+        className={`relative w-full overflow-hidden bg-paper-dim ${aspect} ${
+          rounded ? "rounded-xl" : ""
+        }`}
+      >
         {src ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img

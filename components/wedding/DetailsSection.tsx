@@ -6,11 +6,13 @@ function VenueBlock({
   time,
   venue,
   address,
+  mapUrl,
 }: {
   label: string;
   time: string;
   venue: string;
   address: string;
+  mapUrl?: string;
 }) {
   return (
     <div className="flex flex-col items-center gap-1.5 px-2 text-center sm:items-start sm:px-4 sm:text-left">
@@ -18,6 +20,16 @@ function VenueBlock({
       <p className="font-display text-xl italic text-navy sm:text-2xl">{venue}</p>
       <p className="text-sm text-navy/70">{time}</p>
       <p className="text-sm text-navy/70">{address}</p>
+      {mapUrl && (
+        <a
+          href={mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tracked mt-1 text-[0.65rem] text-navy underline decoration-navy/30 underline-offset-4 transition-colors duration-300 hover:text-navy/70 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-navy"
+        >
+          View Map
+        </a>
+      )}
     </div>
   );
 }
@@ -45,6 +57,7 @@ export default function DetailsSection() {
             venue={details.reception.venue}
             time={details.reception.time}
             address={details.reception.address}
+            mapUrl={details.reception.mapUrl}
           />
         </div>
       </div>
@@ -54,7 +67,7 @@ export default function DetailsSection() {
           <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" />
         </div>
         <div data-aos="fade-up" data-aos-delay="150">
-          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" />
+          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" src="./assets/shakeys.png"/>
         </div>
       </div>
 
