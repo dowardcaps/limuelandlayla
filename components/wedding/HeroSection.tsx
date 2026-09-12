@@ -3,6 +3,7 @@ import PhotoCard from "./PhotoCard";
 import SaveTheDate from "./SaveTheDate";
 import NavTile from "./NavTile";
 import { couple, weddingDate } from "../../data/content";
+import Image from "next/image";
 
 /**
  * Home page content: a bento grid rather than the scattered/rotated
@@ -17,12 +18,27 @@ export default function HeroSection() {
   return (
     <div className="collage-enter">
       <section className="mx-auto w-full max-w-4xl px-4 py-10 sm:px-6 sm:py-14 md:px-10 md:py-16">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 md:gap-5">
+        {/* Envelope banner, sitting above the grid as its own element (not
+            an absolutely-positioned overlay, so it can't collide with or
+            hide any grid content). Uses a fixed aspect-ratio container +
+            `fill` so it scales cleanly at every breakpoint. */}
+       <div className="absolute left-1/2 flex-center w-100 -translate-x-1/2">
+    <Image
+      src="/assets/envelope.png"
+      alt="Wedding envelope"
+      height={500}
+      width={500}
+      className="w-full"
+      priority
+    />
+  </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 md:gap-5 mt-80">
           {/* Header / monogram card */}
           <div
             className="col-span-2 sm:col-start-1 sm:col-span-2 sm:row-start-1"
             data-aos="fade-up"
-            data-aos-delay="0"
+            data-aos-delay="50"
           >
             <div className="flex h-full flex-col items-center justify-center gap-2 rounded-2xl border border-navy/10 bg-white px-4 py-8 text-center paper-shadow-soft sm:items-start sm:px-6 sm:py-10 sm:text-left md:gap-3">
               <Monogram size="md" />

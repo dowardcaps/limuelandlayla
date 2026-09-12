@@ -67,7 +67,7 @@ export default function DetailsSection() {
           <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" />
         </div>
         <div data-aos="fade-up" data-aos-delay="150">
-          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" src="./assets/shakeys.png"/>
+          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" />
         </div>
       </div>
 
