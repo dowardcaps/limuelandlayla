@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import PageShell from "../../components/wedding/PageShell";
 import FAQSection from "../../components/wedding/FAQSection";
+import AttireSection from "../../components/wedding/AttireSection";
 
 export const metadata: Metadata = {
-  title: "FAQs — Limuel & Layla",
+  title: "Details-02 — Limuel & Layla",
 };
 
-export default function FAQsPage() {
+export default function FaqsAttirePage() {
   return (
-    <PageShell currentLabel="FAQs">
+    <PageShell currentLabel="Dress code & Wedding FAQ list">
+      <AttireSection />
       <FAQSection />
     </PageShell>
   );

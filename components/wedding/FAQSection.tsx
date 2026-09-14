@@ -82,7 +82,7 @@ export default function FAQSection() {
         <div className="flex flex-col items-center gap-3 text-center" data-aos="fade-up">
           <p className="tracked-wide text-sm text-navy/90">Good to Know</p>
           <h2 className="font-display text-4xl font-bold text-navy sm:text-5xl">
-            Frequently Asked Questions
+            Wedding FAQ list
           </h2>
           <div className="mt-2 h-px w-16 bg-white/50" />
         </div>

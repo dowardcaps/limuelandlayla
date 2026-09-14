@@ -26,8 +26,8 @@ export const details = {
   ceremony: {
     label: "CEREMONY",
     time: "[CEREMONY TIME]",
-    venue: "[CEREMONY VENUE]",
-    address: "[VENUE ADDRESS]",
+    venue: "Naic Municipal Hall",
+    address: "Antero Soriano Hwy, Naic, Cavite",
   },
   reception: {
     label: "RECEPTION",
@@ -45,7 +45,7 @@ export const details = {
 };
 
 export const attire = {
-  heading: "ATTIRE",
+  heading: "DRESS CODE",
   subheading: "Semi Formal",
   note: "We kindly request everyone to wear semi-formal attire for our special celebration.",
   palette: [
@@ -59,27 +59,30 @@ export const attire = {
 
 export const faqs = [
   {
-    question: "What time should we arrive at the venue?",
-    answer:
-      "We recommend arriving at least 30 minutes before the ceremony begins so you have enough time to find your seat and settle in.",
+    question: "WHEN IS THE RSVP DEADLINE?",
+    answer:"",
   },
   {
-    question: "Is there parking available at the venue?",
-    answer: "Yes, parking information will be provided for guests closer to the date.",
+    question: "WHAT TIME SHOULD I ARRIVE?",
+    answer: "",
   },
   {
-    question: "Are children welcome?",
-    answer:
-      "We love your little ones, but we've chosen to keep our celebration an adults-only affair so everyone can relax and enjoy the evening.",
+    question: "A NOTE ON GIFTS",
+    answer:`Your presence is all we ask for as we celebrate our special day.
+If you wish to give, a monetary gift would be most appreciated and will be used toward our future together.`,
   },
   {
-    question: "What should I wear?",
+    question: "CAN I INVITE A PLUS ONE?",
     answer:
-      "Semi-formal attire. See the Attire section above for a palette to help guide your outfit colors.",
+      `We have chosen to keep our celebration intimate, surrounded by our beloved family and closest friends.
+As such, we are unable to accommodate additional guests or plus ones beyond those formally invited.
+We hope you understand and appreciate your presence more than words can express. 🤍`
   },
   {
-    question: "Can I bring a plus one?",
+    question: "CAN I BRING MY KIDS?",
     answer:
-      "Seats are limited, so only guests named on the invitation are reserved a seat. Thank you for understanding.",
+      `We adore your little ones, and we hope you understand that we are keeping our wedding very intimate.
+For this special day, we will be celebrating with our own children and a few little ones from our immediate family.
+Thank you so much for understanding and for being part of our celebration. 🤍`,
   },
 ];

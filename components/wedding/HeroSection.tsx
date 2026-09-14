@@ -90,25 +90,11 @@ export default function HeroSection() {
             <NavTile href="/details" label="Details" rounded />
           </div>
           <div
-            className="col-span-1 sm:col-start-2 sm:row-start-3"
-            data-aos="fade-up"
-            data-aos-delay="230"
-          >
-            <NavTile href="/entourage" label="Entourage" rounded />
-          </div>
-          <div
-            className="col-span-1 sm:col-start-3 sm:row-start-3"
-            data-aos="fade-up"
-            data-aos-delay="260"
-          >
-            <NavTile href="/attire" label="Attire" rounded />
-          </div>
-          <div
             className="col-span-1 sm:col-start-4 sm:row-start-3 flex items-center justify-center"
             data-aos="fade-up"
             data-aos-delay="290"
           >
-            <NavTile href="/faqs" label="FAQs" shape="circle" circleSize="md" />
+            <NavTile href="/faqs-attire" label="Click for FAQs" shape="circle" circleSize="lg" />
           </div>
 
           {/* Two supporting photos */}

@@ -64,10 +64,10 @@ export default function DetailsSection() {
 
       <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2">
         <div data-aos="fade-up" data-aos-delay="100">
-          <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" />
+          <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" src="/assets/naic-municipal-hall.webp"/>
         </div>
         <div data-aos="fade-up" data-aos-delay="150">
-          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" />
+          <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" src="/assets/shakeys.png"/>
         </div>
       </div>
 

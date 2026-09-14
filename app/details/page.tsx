@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "../../components/wedding/PageShell";
 import DetailsSection from "../../components/wedding/DetailsSection";
+import EntourageSection from "../../components/wedding/EntourageSection";
 
 export const metadata: Metadata = {
   title: "Details — Limuel & Layla",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function DetailsPage() {
   return (
     <PageShell currentLabel="Details">
+      <EntourageSection />
       <DetailsSection />
     </PageShell>
   );
