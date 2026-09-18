@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { couple, weddingDate } from "../../data/content";
+// import { couple, weddingDate } from "../../data/content";
 
 export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
   return (
@@ -51,8 +51,6 @@ export default function EnvelopeIntro({ onOpened }: { onOpened: () => void }) {
 
         <span
           className="font-display italic text-2xl text-white"
-          data-aos="fade-up"
-          data-aos-delay="300"
         >
           Tap anywhere to open
         </span>
