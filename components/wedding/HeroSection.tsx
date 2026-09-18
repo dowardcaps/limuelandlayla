@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function HeroSection(): React.ReactElement {
   return (
     <div className="collage-enter mt-28">
-      <section className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-12 md:px-10 md:py-16">
+      <section className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 md:px-10">
 
         {/* Envelope banner — now zoomable */}
         <div
