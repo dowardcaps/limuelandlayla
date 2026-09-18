@@ -3,10 +3,11 @@ import NavTile from "./NavTile";
 
 import { couple, weddingDate } from "../../data/content";
 import LightboxImage from "../ui/LightboxImage";
+import Image from "next/image";
 
 export default function HeroSection(): React.ReactElement {
   return (
-    <div className="collage-enter">
+    <div className="collage-enter mt-28">
       <section className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-12 md:px-10 md:py-16">
 
         {/* Envelope banner — now zoomable */}
@@ -15,18 +16,17 @@ export default function HeroSection(): React.ReactElement {
           data-aos="fade-down"
           data-aos-delay="0"
         >
-          <LightboxImage
+          <Image
             src="/assets/envelope.png"
             alt="Wedding envelope"
             width={500}
             height={500}
-            className="h-auto w-full object-contain drop-shadow-md"
-            wrapperClassName="!rounded-none bg-transparent"
+            className="h-auto w-full object-contain drop-shadow-md absolute"
             priority
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 md:gap-5">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4 sm:gap-4 md:gap-5 mt-96">
 
           {/* Monogram / invite card */}
           <div
@@ -69,7 +69,7 @@ export default function HeroSection(): React.ReactElement {
                 caption={`${couple.first} & ${couple.second}`}
                 sizes="(max-width: 640px) 100vw, 50vw"
               />
-              <p className="text-sm leading-relaxed text-navy/70 sm:text-[0.9rem]">
+              <p className="text-lg leading-relaxed text-navy/70 sm:text-[0.9rem]">
                 We&apos;re getting married! 🤍 We&apos;d love for you to be there as we
                 celebrate this special moment with the people closest to our
                 hearts. After the ceremony, let&apos;s enjoy a simple lunch and
@@ -143,7 +143,7 @@ export default function HeroSection(): React.ReactElement {
         {/* Footer */}
         <div className="mt-10 flex flex-col items-center gap-3 text-navy/40 sm:mt-16">
           <span aria-hidden="true" className="h-8 w-px bg-navy/20 sm:h-10" />
-          <p className="tracked text-[0.6rem] text-navy/50">{couple.hashtag}</p>
+          <p className="tracked text-md text-navy">{couple.hashtag}</p>
         </div>
       </section>
     </div>
