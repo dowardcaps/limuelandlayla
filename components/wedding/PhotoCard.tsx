@@ -19,7 +19,7 @@ export default function PhotoCard({
   alt,
   caption,
   rotate = "rotate-0",
-  aspect = "aspect-[4/5]",
+  aspect = "",
   className = "",
   rounded = false,
 }: PhotoCardProps) {

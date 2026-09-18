@@ -14,7 +14,7 @@ export const weddingDate = {
   day: "14",
   year: "2026",
   iso: "2026-12-14",
-  display: "December 14, 2026",
+  display: "October 22, 2026",
 };
 
 export const saveTheDate = {
@@ -59,29 +59,32 @@ export const attire = {
 
 export const faqs = [
   {
-    question: "WHEN IS THE RSVP DEADLINE?",
-    answer:"",
+    question: "HOW MANY SEATS ARE RESERVED FOR US?",
+    answer: `As we are celebrating an intimate wedding, we have reserved, 1 to 2 seats specifically for you. Thank you for understanding and for being part of our special day. 🤍`,
   },
   {
     question: "WHAT TIME SHOULD I ARRIVE?",
-    answer: "",
+    answer: `To ensure a smooth and timely celebration, we kindly encourage everyone to arrive 15 to 30 minutes before the scheduled time.
+
+For Ninongs & Ninangs: Please arrive by 8:30 AM for the 9:00 AM ceremony
+For Guests: Please arrive by 10:00 AM for the 10:30 AM reception.
+
+Thank you for being on time and helping us make our day extra special. 🤍`,
   },
   {
     question: "A NOTE ON GIFTS",
-    answer:`Your presence is all we ask for as we celebrate our special day.
+    answer: `Your presence is all we ask for as we celebrate our special day.
 If you wish to give, a monetary gift would be most appreciated and will be used toward our future together.`,
   },
   {
     question: "CAN I INVITE A PLUS ONE?",
-    answer:
-      `We have chosen to keep our celebration intimate, surrounded by our beloved family and closest friends.
+    answer: `We have chosen to keep our celebration intimate, surrounded by our beloved family and closest friends.
 As such, we are unable to accommodate additional guests or plus ones beyond those formally invited.
-We hope you understand and appreciate your presence more than words can express. 🤍`
+We hope you understand and appreciate your presence more than words can express. 🤍`,
   },
   {
     question: "CAN I BRING MY KIDS?",
-    answer:
-      `We adore your little ones, and we hope you understand that we are keeping our wedding very intimate.
+    answer: `We adore your little ones, and we hope you understand that we are keeping our wedding very intimate.
 For this special day, we will be celebrating with our own children and a few little ones from our immediate family.
 Thank you so much for understanding and for being part of our celebration. 🤍`,
   },
