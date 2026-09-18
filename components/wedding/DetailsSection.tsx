@@ -32,7 +32,7 @@ export default function DetailsSection() {
         <h2 className="font-display text-2xl text-navy sm:text-3xl md:text-4xl">Details</h2>
       </div>
 
-      <div className="grid gap-8 border-t border-hairline pt-8 sm:grid-cols-2 sm:gap-10 sm:pt-10">
+      <div className="flex flex-col gap-8 border-t border-hairline pt-8 sm:gap-10 sm:pt-10">
         <div data-aos="fade-up" data-aos-delay="100">
           <VenueBlock
             label={details.ceremony.label}
@@ -40,6 +40,9 @@ export default function DetailsSection() {
             venue={details.ceremony.venue}
             address={details.ceremony.address}
           />
+        </div>
+         <div data-aos="fade-up" data-aos-delay="100">
+          <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" src="/assets/naic-municipal-hall.webp"/>
         </div>
         <div data-aos="fade-up" data-aos-delay="150">
           <VenueBlock
@@ -50,17 +53,10 @@ export default function DetailsSection() {
             mapUrl={details.reception.mapUrl}
           />
         </div>
-      </div>
-
-      <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2">
-        <div data-aos="fade-up" data-aos-delay="100">
-          <PhotoCard alt="Ceremony venue" aspect="aspect-[16/10]" src="/assets/naic-municipal-hall.webp"/>
-        </div>
         <div data-aos="fade-up" data-aos-delay="150">
           <PhotoCard alt="Reception venue" aspect="aspect-[16/10]" src="/assets/shakeys.png"/>
         </div>
       </div>
-
     </section>
   );
 }

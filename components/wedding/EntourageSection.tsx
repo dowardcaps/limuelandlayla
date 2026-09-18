@@ -97,14 +97,6 @@ export default function EntourageSection() {
             </ul>
           </div>
         </div>
-
-        {/* Reception */}
-        <div data-aos="fade-up" data-aos-delay="400">
-          <div className="flex flex-col items-center gap-2">
-            <h3 className="font-display text-3xl italic text-navy sm:text-3xl">Reception</h3>
-            <p className="text-sm text-navy/80 sm:text-base">{entourageData.reception}</p>
-          </div>
-        </div>
       </div>
     </section>
   );
