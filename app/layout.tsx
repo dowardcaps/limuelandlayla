@@ -27,7 +27,7 @@ const script = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Limuel & Layla — December 14, 2026",
+  title: "Limuel & Layla — October 22, 2026",
   description: "You are invited to the wedding of Limuel & Layla.",
 };
 
