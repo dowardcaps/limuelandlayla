@@ -33,7 +33,7 @@ export const details = {
   reception: {
     label: "RECEPTION",
     time: "10:30 AM",
-    venue: "Shakey'a NAIC",
+    venue: "Shakey's NAIC",
     address: "Governor's Drive, Naic, Cavite",
     mapUrl: "https://maps.app.goo.gl/881GohuyMg99kKVL8",
   },
