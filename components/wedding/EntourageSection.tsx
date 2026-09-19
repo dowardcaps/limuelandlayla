@@ -63,7 +63,7 @@ export default function EntourageSection() {
         {/* Ninongs */}
         <div data-aos="fade-up" data-aos-delay="100">
           <div className="flex flex-col items-center gap-4 mt-10">
-            <h3 className="font-display text-2xl italic text-navy sm:text-3xl">Those who stand with us</h3>
+            <h3 className="font-display text-3xl italic text-navy sm:text-3xl">Those who stand with us</h3>
 
             <ul className="flex w-full max-w-md flex-col items-center gap-2">
               {entourageData.ninong.map((item, index) => (
