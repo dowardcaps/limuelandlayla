@@ -62,8 +62,9 @@ export default function EntourageSection() {
 
         {/* Ninongs */}
         <div data-aos="fade-up" data-aos-delay="100">
-          <div className="flex flex-col items-center gap-4">
-            <h3 className="font-display text-3xl italic text-navy sm:text-3xl">Ninongs</h3>
+          <div className="flex flex-col items-center gap-4 mt-10">
+            <h3 className="font-display text-3xl italic text-navy sm:text-3xl">THOSE WHO STAND WITH US</h3>
+
             <ul className="flex w-full max-w-md flex-col items-center gap-2">
               {entourageData.ninong.map((item, index) => (
                 <li 
@@ -77,12 +78,13 @@ export default function EntourageSection() {
               ))}
             </ul>
           </div>
+                  <div className="h-px w-16 bg-navy/30  mx-auto mt-15" />
         </div>
+        
 
         {/* Ninangs */}
         <div data-aos="fade-up" data-aos-delay="200">
           <div className="flex flex-col items-center gap-4">
-            <h3 className="font-display text-3xl italic text-navy sm:text-3xl">Ninangs</h3>
             <ul className="flex w-full max-w-md flex-col items-center gap-2">
               {entourageData.ninang.map((item, index) => (
                 <li 

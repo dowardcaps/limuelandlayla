@@ -99,7 +99,7 @@ export default function HeroSection(): React.ReactElement {
             data-aos-delay="150"
           >
             <LightboxImage
-              src="/assets/holdinghands.jpg"
+              src="/assets/smile.jpg"
               alt="Holding hands"
               width={1000}
               height={1000}
@@ -129,7 +129,7 @@ export default function HeroSection(): React.ReactElement {
             data-aos-delay="220"
           >
             <LightboxImage
-              src="/assets/far.jpg"
+              src="/assets/holdinghands.jpg"
               alt="A quiet moment"
               width={1000}
               height={1000}
@@ -143,7 +143,7 @@ export default function HeroSection(): React.ReactElement {
         {/* Footer */}
         <div className="mt-10 flex flex-col items-center gap-3 text-navy/40 sm:mt-16">
           <span aria-hidden="true" className="h-8 w-px bg-navy/20 sm:h-10" />
-          <p className="tracked text-md text-navy">{couple.hashtag}</p>
+          <p className="tracked text-lg text-navy whitespace-pre-line">{couple.verse}</p>
         </div>
       </section>
     </div>

@@ -8,8 +8,8 @@ export default function SiteFooter() {
       <p className="font-script text-xl text-navy sm:text-2xl">
         {couple.first} &amp; {couple.second}
       </p>
-      <p className="tracked text-[0.6rem] text-navy/70">
-        {weddingDate.display} &middot; {couple.hashtag}
+      <p className="tracked text-md text-navy">
+        {weddingDate.display}
       </p>
     </footer>
   );

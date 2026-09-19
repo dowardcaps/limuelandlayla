@@ -27,8 +27,8 @@ const script = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Limuel & Layla — October 22, 2026",
-  description: "You are invited to the wedding of Limuel & Layla.",
+  title: "LIMUEL & LAYLA",
+  description: "You are invited to the wedding of Limuel & Layla. - Oct. 22, 2026",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

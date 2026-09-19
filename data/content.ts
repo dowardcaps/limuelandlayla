@@ -5,7 +5,8 @@ export const couple = {
   first: "Limuel",
   second: "Layla",
   initials: "L & L",
-  hashtag: "#LimuelAndLayla",
+  verse: `"Do everything in love.”
+  — 1 Corinthians 16:14`,
 };
 
 export const weddingDate = {
