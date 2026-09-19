@@ -91,7 +91,7 @@ export default function InvitationCollage() {
           {couple.first} &amp; {couple.second}
         </p>
         <p className="tracked text-[0.6rem] text-navy/50">
-          {weddingDate.display} &middot; {couple.hashtag}
+          {weddingDate.display} &middot; {couple.verse}
         </p>
       </footer>
     </main>
