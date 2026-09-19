@@ -34,7 +34,7 @@ export const details = {
     label: "RECEPTION",
     time: "10:30 AM",
     venue: "SHAKEY'S NAIC",
-    address: "Governor's Dr, Naic, Cavite",
+    address: "Governor's Drive, Barangay Ibayo Silang, Naic, Cavite",
     mapUrl: "https://maps.app.goo.gl/881GohuyMg99kKVL8",
   },
   mapUrl: "#",
