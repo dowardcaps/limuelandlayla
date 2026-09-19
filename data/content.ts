@@ -27,13 +27,13 @@ export const details = {
   ceremony: {
     label: "CEREMONY",
     time: "9:00 AM",
-    venue: "Naic Municipal Hall",
+    venue: "NAIC Municipal Hall",
     address: "Antero Soriano Hwy, Naic, Cavite",
   },
   reception: {
     label: "RECEPTION",
     time: "10:30 AM",
-    venue: "SHAKEY'S NAIC",
+    venue: "Shakey'a NAIC",
     address: "Governor's Drive, Naic, Cavite",
     mapUrl: "https://maps.app.goo.gl/881GohuyMg99kKVL8",
   },
